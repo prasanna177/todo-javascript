@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"
+    />
+</head>
+<body>
+<!--Incomplete container-->
+  <div class="main-grid">
+    <div class="incomplete-container">
+      <div class="title">
+        Incomplete tasks
+      </div>
+      <div class="btnContainer">
+        <button class="add-button" id="addBtn">Add<span class="button-icon">+</span></button>
+        <button class="add-button delete-button" id="delBtn">Delete<span class="button-icon">-</span></button>
+      </div>
+      <div class="tasks-container">
+        <div class="task">
+          <div class="task-name-container">Do homework <i class="fa-solid fa-ellipsis-vertical"></i></div>
+          <div>Math homework, Science homework, Computer homework</div>
+        </div>
+        <div class="task">
+          <div class="task-name-container">Do dishes <i class="fa-solid fa-ellipsis-vertical"></i></div>
+          <div>Wash plates, cups, bowls</div>
+        </div>
+        <div class="task">
+          <div class="task-name-container">Task name <i class="fa-solid fa-ellipsis-vertical"></i></div>
+          <div>Task description</div>
+        </div>
+        <div class="task">
+          <div class="task-name-container">Task name <i class="fa-solid fa-ellipsis-vertical"></i>  </div>
+          <div>Task description</div>
+        </div>
+      </div>
+    </div>
+
+  <!--modal-->
+  <div class="modal" id="myModal">
+    <div class="modal-content">
+      <div class="modal-title">Create a new task</div>
+      <input class="todo-input" id="todoInput" placeholder="To-do name">
+      <textarea rows="40" cols="40" class="todo-description" id="todoDescription" placeholder="To-do description"></textarea>
+      <button class="submit-button" id="submitBtn">Submit</button>
+    </div>
+  </div>
+  <!--js-->
+  <script src="./script/script.js"></script>
+</body>
+</html>
