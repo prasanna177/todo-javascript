@@ -157,9 +157,9 @@ body {
 }
 
 .fa-solid:hover{
-  background-color: gray;
-  padding: 5px;
-  border-radius: 20px;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .fa-solid:active {
