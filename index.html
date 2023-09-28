@@ -21,32 +21,36 @@
         <button class="add-button" id="addBtn">Add<span class="button-icon">+</span></button>
         <button class="add-button delete-button" id="delBtn">Delete<span class="button-icon">-</span></button>
       </div>
-      <div class="tasks-container">
-        <div class="task">
-          <div class="task-name-container">Do homework <i class="fa-solid fa-ellipsis-vertical"></i></div>
-          <div>Math homework, Science homework, Computer homework</div>
-        </div>
-        <div class="task">
-          <div class="task-name-container">Do dishes <i class="fa-solid fa-ellipsis-vertical"></i></div>
-          <div>Wash plates, cups, bowls</div>
-        </div>
-        <div class="task">
-          <div class="task-name-container">Task name <i class="fa-solid fa-ellipsis-vertical"></i></div>
-          <div>Task description</div>
-        </div>
-        <div class="task">
-          <div class="task-name-container">Task name <i class="fa-solid fa-ellipsis-vertical"></i>  </div>
-          <div>Task description</div>
-        </div>
+      <div id="tasks-container">
+
       </div>
     </div>
+  
+    <div class="incomplete-container">
+      <div class="title">
+        In progress
+      </div>
+      <div id="tasks-container">
+
+      </div>
+    </div>
+
+    <div class="incomplete-container">
+      <div class="title">
+        Complete tasks
+      </div>
+      <div id="tasks-container">
+
+      </div>
+    </div>
+  </div>
 
   <!--modal-->
   <div class="modal" id="myModal">
     <div class="modal-content">
-      <div class="modal-title">Create a new task</div>
+      <div class="modal-title">Create a new task <i class="fa-solid fa-xmark" id="closeBtn"></i></div>
       <input class="todo-input" id="todoInput" placeholder="To-do name">
-      <textarea rows="40" cols="40" class="todo-description" id="todoDescription" placeholder="To-do description"></textarea>
+      <textarea rows="15" class="todo-description" id="todoDescription" placeholder="To-do description"></textarea>
       <button class="submit-button" id="submitBtn">Submit</button>
     </div>
   </div>

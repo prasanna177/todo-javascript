@@ -38,6 +38,7 @@ body {
   border-radius: 5px;
   display: flex;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .add-button:hover {
@@ -49,7 +50,7 @@ body {
 }
 
 .delete-button {
-  background-color: rgb(255, 39, 39);
+  background-color: rgb(255, 110, 110);
 }
 
 .button-icon {
@@ -97,7 +98,16 @@ body {
   gap: 30px;
 }
 
+.modal-title {
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 170px;
+}
+
 .todo-input {
+  outline: none;
   height: 80px;
   border-radius: 10px;
   border: none;
@@ -117,17 +127,19 @@ body {
   border: none;
   border-radius: 30px;
   background-color: white;
+  transition: all 0.1s;
 }
 
 .submit-button:hover {
   opacity: 0.8;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
 }
 
 .submit-button:active {
   opacity: 1;
 }
 
-.tasks-container {
+#tasks-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,17 +149,12 @@ body {
 .task {
   display: flex;
   flex-direction: column;
+  position: relative;
   gap: 20px;
   background-color: rgb(164, 255, 167);
   padding: 10px;
   border-radius: 5px;
   width: 325px;
-}
-
-.modal-title {
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
 }
 
 .task-name-container{
@@ -156,10 +163,36 @@ body {
   align-items: center;
 }
 
-.fa-solid:hover{
-  background-color: red;
+#flex-popup {
+  background-color: rgb(200, 200, 200);
+  display: none;
+  flex-direction: column;
   padding: 10px;
-  border-radius: 10px;
+  gap: 20px;
+  position: absolute;
+  right: 0px;
+  top: 40px;
+  height: 120px;
+  width: 200px;
+}
+
+.popup-option:hover {
+  background-color: rgb(187, 187, 187);
+}
+
+.fa-solid {
+  cursor: pointer;
+}
+
+.fa-solid:hover{
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px; */
+  color: white;
 }
 
 .fa-solid:active {
