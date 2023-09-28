@@ -163,21 +163,43 @@ body {
   align-items: center;
 }
 
-#flex-popup {
+.popup-modal {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.flex-popup {
   background-color: rgb(200, 200, 200);
+  z-index: 1;
   display: none;
   flex-direction: column;
-  padding: 10px;
-  gap: 20px;
   position: absolute;
   right: 0px;
   top: 40px;
-  height: 120px;
+  height: 200px;
   width: 200px;
+}
+
+.popup-option {
+  height: 30px;
+  padding-bottom: 40px;
+  position: relative;
 }
 
 .popup-option:hover {
   background-color: rgb(187, 187, 187);
+}
+
+.popup-option-text {
+  position: absolute;
+  left: 10px;
 }
 
 .fa-solid {

@@ -3,6 +3,19 @@ const delBtn = document.getElementById('delBtn');
 const modal = document.getElementById('myModal');
 const submitBtn = document.getElementById('submitBtn');
 const closeBtn = document.getElementById('closeBtn');
+const cancelBtn = document.getElementById('cancelBtn');
+
+const popUpclick = (element) => {
+  console.log(element);
+  const popupEl = element.parentNode.querySelector('.flex-popup');
+  console.log(popupEl)
+  popupEl.style.display = "flex";
+}
+
+const clickCancel = (element) => {
+  const cancelEl = element.parentNode;
+  cancelEl.style.display = "none";
+}
 
 delBtn.onclick = () => {
   todoList.splice(0,todoList.length);
@@ -20,7 +33,7 @@ addBtn.onclick = () => {
 closeBtn.onclick = () => {
   modal.style.display = "none";
 }
-
+  
 window.onclick = (event) => {
   if (event.target === modal) {
     modal.style.display = "none";
@@ -37,23 +50,20 @@ function renderTodo() {
   for (let i = 0; i<todoList.length;i++) { 
     const todoName = todoList[i].todoName;
     const todoDescription = todoList[i].todoDescription;
-    const html = `<div class="task">
-            <div class="task-name-container">${todoName}<i class="fa-solid fa-ellipsis-vertical" id="popupBtn"></i><div id="flex-popup">
-            <div class = "popup-option">Edit</div>
-            <div class = "popup-option">Delete</div>
-            <div class = "popup-option">Cancel</div>
-            </div></div>
+    const html = `
+          <div class="task">
+            <div class="task-name-container">${todoName}<i class="fa-solid fa-ellipsis-vertical" class="popupBtn" onclick = "popUpclick(this)"></i>
+              <div class="flex-popup">
+                <div class = "popup-option"><p class="popup-option-text">Edit</p></div>
+                <div class = "popup-option"><p class="popup-option-text">Delete</p></div>
+                <div class = "popup-option" onclick = "clickCancel(this)"><p class="popup-option-text">Cancel</p></div>
+              </div>
+            </div>
             <div>${todoDescription}</div>
           </div>`
     todoHTML += html;
-    
-    const popUp = document.getElementById('popupBtn');
-    const popUpDisplay = document.getElementById('flex-popup');
-
-    popUp.onclick = () => {
-      popUpDisplay.style.display = "flex";
-    }
   }
+
 
   console.log(todoHTML);
   document.getElementById('tasks-container').innerHTML = todoHTML;
