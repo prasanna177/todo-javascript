@@ -4,6 +4,7 @@ const modal = document.getElementById('myModal');
 const submitBtn = document.getElementById('submitBtn');
 const closeBtn = document.getElementById('closeBtn');
 const cancelBtn = document.getElementById('cancelBtn');
+// const popupDel = document.getElementById('popupDel');
 
 const popUpclick = (element) => {
   console.log(element);
@@ -30,8 +31,14 @@ addBtn.onclick = () => {
   modal.style.display = "flex";
 }
 
+
+/* popup options */
 closeBtn.onclick = () => {
   modal.style.display = "none";
+}
+
+const deleteTask = (element) => {
+  
 }
   
 window.onclick = (event) => {
@@ -55,7 +62,7 @@ function renderTodo() {
             <div class="task-name-container">${todoName}<i class="fa-solid fa-ellipsis-vertical" class="popupBtn" onclick = "popUpclick(this)"></i>
               <div class="flex-popup">
                 <div class = "popup-option"><p class="popup-option-text">Edit</p></div>
-                <div class = "popup-option"><p class="popup-option-text">Delete</p></div>
+                <div class = "popup-option"><p class="popup-option-text" onclick = "deleteTask(this)">Delete</p></div>
                 <div class = "popup-option" onclick = "clickCancel(this)"><p class="popup-option-text">Cancel</p></div>
               </div>
             </div>

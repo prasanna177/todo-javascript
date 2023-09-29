@@ -163,7 +163,7 @@ body {
   align-items: center;
 }
 
-.popup-modal {
+/* .popup-modal {
   position: fixed;
   display: none;
   align-items: center;
@@ -173,7 +173,7 @@ body {
   height: 100%;
   width: 100%;
   margin-bottom: 0;
-}
+} */
 
 .flex-popup {
   background-color: rgb(200, 200, 200);
