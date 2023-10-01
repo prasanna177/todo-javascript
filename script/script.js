@@ -7,7 +7,7 @@ const cancelBtn = document.getElementById('cancelBtn');
 const saveBtn = document.getElementById('saveBtn');
 const inputElement = document.getElementById('todoInput');
 const inputDescElement = document.getElementById('todoDescription');
-  const hiddenIndex = document.getElementById("hiddenIndex");
+const hiddenIndex = document.getElementById("hiddenIndex");
 // const popupDel = document.getElementById('popupDel');
 
 const popUpclick = (element) => {
@@ -32,6 +32,8 @@ submitBtn.onclick = () => {
 }
 
 addBtn.onclick = () => {
+  inputElement.value = '';
+  inputDescElement.value = '';
   modal.style.display = "flex";
   saveBtn.style.display = "none";
   submitBtn.style.display = "block";
